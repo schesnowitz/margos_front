@@ -61,6 +61,3 @@ gem 'httparty', '~> 0.15.6'
 gem 'local_time', '~> 2.0'
 gem 'bootstrap', '~> 4.1.1'
 gem "cocoon" 
-gem 'poltergeist'
-gem 'phantomjs', :require => 'phantomjs/poltergeist' 
-gem 'yt', '~> 0.28.0'
