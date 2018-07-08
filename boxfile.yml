@@ -37,8 +37,8 @@ web.main:
   log_watch:
     rails: 'log/production.log'
 
-worker.sidekiq:
-  start: bundle exec sidekiq
+# worker.sidekiq:
+#   start: bundle exec sidekiq
   
   # start: bundle exec sidekiq -q default -q mailers -C /app/config/initializers/sidekiq.rb
 
