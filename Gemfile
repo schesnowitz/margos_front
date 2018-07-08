@@ -39,24 +39,28 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-
 gem 'nanoboxifier'
 gem 'pg', '~> 1.0'
-gem 'sidekiq', '~> 5.1', '>= 5.1.3'
 gem 'faker', '~> 1.8', '>= 1.8.7'
-# source 'https://rails-assets.org' do
-#   gem 'rails-assets-chosen-bootstrap' # if using bootstrap
-# end
-# gem 'bootstrap', '~> 4.1.1' 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-chosen-bootstrap' # if using bootstrap
+end
+
 gem 'jquery-rails'
 gem 'simple_form', '~> 4.0', '>= 4.0.1' 
 gem 'devise', '~> 4.4', '>= 4.4.3' 
-gem 'nokogiri', '~> 1.8', '>= 1.8.2'
-gem 'sidekiq-cron', '~> 0.6.3'
+gem 'nokogiri', '~> 1.8', '>= 1.8.4'
+gem 'mechanize', '~> 2.7', '>= 2.7.6'
+gem 'sidekiq', '~> 5.1', '>= 5.1.3'
+gem "sidekiq-cron"
+gem 'rufus-scheduler', '~> 3.5'
 gem 'bootstrap-sass-extras'
-# gem 'geocoder', '~> 1.4', '>= 1.4.5'
+gem 'geocoder', '~> 1.4', '>= 1.4.5'
 gem 'font-awesome-sass', '~> 4.7.0'
-# gem 'httparty', '~> 0.15.6'
-# gem 'local_time', '~> 2.0'
+gem 'httparty', '~> 0.15.6'
+gem 'local_time', '~> 2.0'
 gem 'bootstrap', '~> 4.1.1'
-# gem "cocoon" 
+gem "cocoon" 
+gem 'poltergeist'
+gem 'phantomjs', :require => 'phantomjs/poltergeist' 
+gem 'yt', '~> 0.28.0'

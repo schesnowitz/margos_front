@@ -1,13 +1,15 @@
 run.config:
   engine: ruby
   engine.config:
-    runtime: ruby-2.4
+    runtime: ruby-2.5
   extra_packages:
     - nodejs
     - nginx
     - pkgconf
     - libxml2
     - libxslt
+    - ImageMagick
+    - phantomjs
 
 
 
@@ -31,14 +33,16 @@ web.main:
     - public/uploads
 
 
+
   log_watch:
     rails: 'log/production.log'
 
 worker.sidekiq:
-  start: sidekiq # if your app uses mailers we need to start them up, comment out this line and use ...
+  start: bundle exec sidekiq
   
-  # start: bundle exec sidekiq -q default -q mailers -C /app/config/sidekiq.rb
+  # start: bundle exec sidekiq -q default -q mailers -C /app/config/initializers/sidekiq.rb
 
+  # Sidekiq.redis { |r| puts r.flushall }
   log_watch:
     sidekiq: 'log/production.log'
 
@@ -46,5 +50,9 @@ worker.sidekiq:
     - tmp
     - log
 
-data.queue:
-  image: nanobox/redis:4.0
+data.redis :
+  image : nanobox/redis:3.2
+
+# data.chrome:
+#   image: selenium/standalone-chrome
+

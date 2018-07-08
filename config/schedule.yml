@@ -1,0 +1,5 @@
+play_video:
+  cron: "* * * * *"
+  class: "PlayVideoJob" 
+  queue: default
+ 
