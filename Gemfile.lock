@@ -74,7 +74,6 @@ GEM
     chromedriver-helper (1.2.0)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
-    cliver (0.3.2)
     cocoon (1.2.11)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -166,11 +165,6 @@ GEM
     ntlm-http (0.1.1)
     orm_adapter (0.5.0)
     pg (1.0.0)
-    phantomjs (2.1.1.0)
-    poltergeist (1.18.1)
-      capybara (>= 2.1, < 4)
-      cliver (~> 0.3.1)
-      websocket-driver (>= 0.2.0)
     popper_js (1.12.9)
     public_suffix (3.0.2)
     puma (3.11.4)
@@ -286,8 +280,6 @@ GEM
     websocket-extensions (0.1.3)
     xpath (3.1.0)
       nokogiri (~> 1.8)
-    yt (0.28.5)
-      activesupport
 
 PLATFORMS
   ruby
@@ -315,8 +307,6 @@ DEPENDENCIES
   nanoboxifier
   nokogiri (~> 1.8, >= 1.8.4)
   pg (~> 1.0)
-  phantomjs
-  poltergeist
   puma (~> 3.11)
   rails (~> 5.2.0)
   rails-assets-chosen-bootstrap!
@@ -333,7 +323,6 @@ DEPENDENCIES
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
-  yt (~> 0.28.0)
 
 BUNDLED WITH
    1.16.2
