@@ -1,6 +1,6 @@
-# Sidekiq.options[:poll_interval] = 5
+# Sidekiq.options[:poll_interval] = 2
 
-
+ 
 Sidekiq.configure_server do |config|
   config.redis = { url: "redis://#{ENV['DATA_REDIS_HOST']}:6379/0" }
   schedule_file = "config/schedule.yml"

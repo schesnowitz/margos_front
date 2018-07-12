@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# ruby '2.5.1'
+ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
@@ -30,10 +30,7 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15', '< 4.0'
-  gem 'selenium-webdriver'
-  # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -52,7 +49,7 @@ gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'nokogiri', '~> 1.8', '>= 1.8.4'
 gem 'mechanize', '~> 2.7', '>= 2.7.6'
 gem 'sidekiq', '~> 5.1', '>= 5.1.3'
-gem "sidekiq-cron"
+gem 'sidekiq-cron', '~> 1.0'
 gem 'rufus-scheduler', '~> 3.5'
 gem 'bootstrap-sass-extras'
 gem 'geocoder', '~> 1.4', '>= 1.4.5'
@@ -61,3 +58,12 @@ gem 'httparty', '~> 0.15.6'
 gem 'local_time', '~> 2.0'
 gem 'bootstrap', '~> 4.1.1'
 gem "cocoon" 
+
+
+
+
+gem 'capybara', '>= 2.15', '< 4.0'
+gem 'poltergeist'
+gem 'phantomjs', :require => 'phantomjs/poltergeist' 
+gem "webdrivers", "~> 3.0"
+gem 'selenium-webdriver', '~> 3.13'

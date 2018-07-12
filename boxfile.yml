@@ -37,8 +37,8 @@ web.main:
   log_watch:
     rails: 'log/production.log'
 
-# worker.sidekiq:
-#   start: bundle exec sidekiq
+worker.sidekiq:
+  start: sidekiq
   
   # start: bundle exec sidekiq -q default -q mailers -C /app/config/initializers/sidekiq.rb
 
@@ -53,6 +53,6 @@ web.main:
 data.redis :
   image : nanobox/redis:3.2
 
-# data.chrome:
-#   image: selenium/standalone-chrome
+data.chrome:
+  image: selenium/standalone-chrome
 

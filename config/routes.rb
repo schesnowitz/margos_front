@@ -4,4 +4,9 @@ Rails.application.routes.draw do
   get 'pages/show'
   
   root to: "pages#index" 
+
+
+  require 'sidekiq/web'
+  require 'sidekiq/cron/web'
+  mount Sidekiq::Web => '/sidekiq'
 end
